@@ -31,9 +31,14 @@ html {
   justify-content: center;
 }
 
+.company-name {
+  color: aliceblue;
+  font-size: 5rem;
+}
+
 .logo {
   display: flex;
-  width: 50px;
+  width: 70px;
 }
 
 body {
@@ -75,7 +80,7 @@ input {
 }
 
 input:focus {
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.253);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.253);
 }
 
 input:invalid {
@@ -110,4 +115,8 @@ button[type="submit"] {
   display: flex;
   flex-direction: column;
   margin-left: 3.3rem;
+}
+
+.no-match {
+  display: none;
 }

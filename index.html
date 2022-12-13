@@ -6,49 +6,52 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
 <body>
     <div class="image-left">
-    <img class="background" src="background.avif" alt="flowers">
-    <div class="hero">
-    <img class="logo" src="robot-svgrepo-com.svg" alt="logo">
-    </div>
+        <img class="background" src="background.avif" alt="flowers">
+        <div class="hero">
+            <p class="company-name">ROBOT</p>
+            <img class="logo" src="robot-svgrepo-com.svg" alt="logo">
+        </div>
     </div>
     <div class="content">
-    <h3 class="heading">
-        <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.<br><br>You <i>know</i> you want to.</p>
+        <h3 class="heading">
+            <p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.<br><br>You <i>know</i> you want to.</p>
     </h3>
     <form id="my-form" action="#" method="post">
         <div class="info">
-        <div class="left-column">
-        <label for="first-name">First Name
-        <input type="text" name="first-name" id="first-name" required>
-    </label>
-        <label for="email">Email
-        <input type="email" name="email" id="email" required>
-    </label>
-        <label for="password">Password
-        <input type="password" name="password" id="password" required>
-    </label>
-        </div>
-        <div class="right-column">
+            <div class="left-column">
+                <label for="first-name">First Name
+                    <input type="text" name="first-name" id="first-name" required minlength="3">
+                </label>
+                <label for="email">Email
+                    <input type="email" name="email" id="email" required>
+                </label>
+                <label for="password">Password
+                    <input type="password" name="password" id="password" required minlength="6">
+                    <p class="no-match">*Passwords do not match</p>
+                </label>
+            </div>
+            <div class="right-column">
             <label for="last-name">Last Name
-            <input type="text" name="last-name" id="last-name" required>
-        </label>
+                <input type="text" name="last-name" id="last-name" required minlength="3">
+            </label>
             <label for="phone-number">Phone Number
-            <input type="tel" name="phone-number" id="phone-number" required>
-        </label>
+                <input type="tel" name="phone-number" id="phone-number" required minlength="10">
+            </label>
             <label for="con-password">Confirm Password
-            <input type="password" name="con-password" id="con-password" required>
-        </label>
-        </div>
-        </div>
-        <div class="foot">
-        <button form="my-form" type="submit">Submit</button>
-            <p>Already have an account? <a href="">Log in</a></p>
+                <input type="password" name="con-password" id="con-password" required minlength="6">
+            </label>
         </div>
     </div>
-    </form>
+    <div class="foot">
+        <button form="my-form" type="submit">Submit</button>
+        <p>Already have an account? <a href="">Log in</a></p>
+    </div>
+</div>
+</form>
+<button onclick="confirm()">asdf</button>
+<script src="script.js"></script>
 </body>
 </html>
