@@ -21,37 +21,74 @@
     </h3>
     <form id="my-form" action="#" method="post">
         <div class="info">
-            <div class="left-column">
+            <div class="first-row">
                 <label for="first-name">First Name
                     <input type="text" name="first-name" id="first-name" required minlength="3">
                 </label>
+                <label for="last-name">Last Name
+                    <input type="text" name="last-name" id="last-name" required minlength="3">
+                </label>
+            </div>
+            <div class="line-break"></div>
+            <div class="second-row">
                 <label for="email">Email
                     <input type="email" name="email" id="email" required>
                 </label>
-                <label for="password">Password
-                    <input type="password" name="password" id="password" required minlength="6">
-                    <p class="no-match">*Passwords do not match</p>
+                <label for="phone-number">Phone Number
+                    <input type="tel" name="phone-number" id="phone-number" required pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" placeholder="123-123-1234">
                 </label>
             </div>
-            <div class="right-column">
-            <label for="last-name">Last Name
-                <input type="text" name="last-name" id="last-name" required minlength="3">
-            </label>
-            <label for="phone-number">Phone Number
-                <input type="tel" name="phone-number" id="phone-number" required minlength="10">
-            </label>
-            <label for="con-password">Confirm Password
-                <input type="password" name="con-password" id="con-password" required minlength="6">
+            <div class="line-break"></div>
+            <div class="third-row">
+                <label for="password">Password
+                    <input class="error" type="password" name="password" id="password" required minlength="6" value="">
+                </label>
+                        <label for="confirm_password">Confirm Password
+                <input class="error" type="password" name="confirm_password" id="confirm_password" required minlength="6">
             </label>
         </div>
     </div>
-    <div class="foot">
-        <button form="my-form" type="submit">Submit</button>
-        <p>Already have an account? <a href="">Log in</a></p>
-    </div>
-</div>
 </form>
-<button onclick="confirm()">asdf</button>
+<div class="foot">
+    <button form="my-form" type="submit">Submit</button>
+    <p>Already have an account? <a href="">Log in</a></p>
+</div>
 <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+<!-- <form id="my-form" action="#" method="post">
+    <div class="info">
+        <div class="left-column">
+            <label for="first-name">First Name
+                <input type="text" name="first-name" id="first-name" required minlength="3">
+            </label>
+            <label for="email">Email
+                <input type="email" name="email" id="email" required>
+            </label>
+            <label for="password">Password
+                <input class="error" type="password" name="password" id="password" required minlength="6">
+                <p class="no-match">*Passwords do not match</p>
+            </label>
+        </div>
+        <div class="right-column">
+        <label for="last-name">Last Name
+            <input type="text" name="last-name" id="last-name" required minlength="3">
+        </label>
+        <label for="phone-number">Phone Number
+            <input type="tel" name="phone-number" id="phone-number" required pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$" placeholder="123-123-1234">
+        </label>
+        <label for="confirm_password">Confirm Password
+            <input class="error" type="password" name="confirm_password" id="confirm_password" required minlength="6">
+        </label>
+    </div>
+</div>
+<div class="foot">
+    <button form="my-form" type="submit">Submit</button>
+    <p>Already have an account? <a href="">Log in</a></p>
+</div>
+</div>
+</form> -->

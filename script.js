@@ -1,20 +1,13 @@
-const password1 = document.querySelector("#password");
-const password2 = document.querySelector("#con-password");
-const submit = document.querySelector("button");
-const match = document.querySelector(".no-match");
+const password = document.getElementById("password")
+const confirm_password = document.getElementById("confirm_password");
 
-// submit.addEventListener("click", confirm);
-
-function confirm () {
-    if (document.querySelector("#password").value === document.querySelector("#con-password").value) {
-        match.style.display = "none";
+function validatePassword(){
+    if(password.value != confirm_password.value) {
+        confirm_password.setCustomValidity("Passwords don't match");
     } else {
-    match.style.display = "inline";
-    // password1.style.border = "2px solid red;"
-};
-};
+        confirm_password.setCustomValidity("");
+    }
+}
 
-// if (document.querySelectorAll("input").value.length = 0) {
-//     document.querySelectorAll("input").classlist.remove("invalid");
-//     document.querySelectorAll("input").classlist.add("valid");
-// }
+password.onchange = validatePassword;
+confirm_password.onkeyup = validatePassword;
